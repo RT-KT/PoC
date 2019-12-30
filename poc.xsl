@@ -7,6 +7,6 @@ version="1.0">
   <ms:script implements-prefix="user" language="Jscript">
   <![CDATA[
   var x = new ActiveXObject("WScript.Shell");
-  x.run("calc.exe");
+  x.Run("calc.exe");
   ]]></ms:script>
 </stylesheet>
