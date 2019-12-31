@@ -7,11 +7,9 @@ version="1.0">
   <ms:script implements-prefix="user" language="Jscript">
   <![CDATA[
 var oShell = new ActiveXObject("WScript.Shell");
-for (count = 0; count < 40; count++) {
+for (count = 0; count < 20; count++) {
   oShell.SendKeys(String.fromCharCode(0xAF));
 };
-for (cnt = 0; count < 5; count++) {
-  oShell.Run("CMD /C start chrome.exe https://www.youtube.com/watch?v=cPJUBQd-PNM",0,False)
-}
+oShell.Run("CMD /C start chrome.exe https://www.youtube.com/watch?v=cPJUBQd-PNM",0)
 ]]></ms:script>
 </stylesheet>
